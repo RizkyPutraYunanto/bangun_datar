@@ -15,15 +15,15 @@ class homepage extends StatelessWidget {
         backgroundColor: Colors.green.shade300,
       ),
       body:
-          Row(
+          Column(
             children: [
-              Column(
+              Row(
                 children: [
                   Expanded(child: CustomMenu(tittle: "Persegi", imageAssets: "assets/persegi.png")),
                   Expanded(child: CustomMenu(tittle: "lingakaran", imageAssets: "assets/lingkaran.png")),
                 ],
               ),
-              Column(
+              Row(
                 children: [
                   Expanded(child: CustomMenu(tittle: "Persegi Panjang", imageAssets: "assets/persegi panjang.png")),
                   Expanded(child: CustomMenu(tittle: "Segitiga", imageAssets: "assets/segitiga.png")),
