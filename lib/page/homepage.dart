@@ -12,28 +12,27 @@ class homepage extends StatelessWidget {
           "Home Page",
           style: TextStyle(color: Color(0xFFFFFFFF)),
         ),
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.green.shade300,
       ),
-      body: ListView(
-        children: [
+      body:
           Row(
             children: [
               Column(
                 children: [
-                  CustomMenu(tittle: "Persegi", imageAssets: "assets/persegi.png"),
-                  CustomMenu(tittle: "Persegi", imageAssets: "assets/persegi.png"),
+                  Expanded(child: CustomMenu(tittle: "Persegi", imageAssets: "assets/persegi.png")),
+                  Expanded(child: CustomMenu(tittle: "lingakaran", imageAssets: "assets/lingkaran.png")),
                 ],
               ),
               Column(
                 children: [
-                  CustomMenu(tittle: "Persegi", imageAssets: "assets/persegi.png"),
-                  CustomMenu(tittle: "Persegi", imageAssets: "assets/persegi.png"),
+                  Expanded(child: CustomMenu(tittle: "Persegi Panjang", imageAssets: "assets/persegi panjang.png")),
+                  Expanded(child: CustomMenu(tittle: "Segitiga", imageAssets: "assets/segitiga.png")),
                 ],
               ),
             ],
           ),
-        ],
-      ),
+
+
     );
   }
 }
@@ -51,9 +50,9 @@ class CustomMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: EdgeInsets.symmetric(horizontal: 16, vertical: 90),
-        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 90),
-        decoration: BoxDecoration(color: Colors.green),
+        margin: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 130),
+        decoration: BoxDecoration(color: Colors.green, borderRadius: BorderRadius.circular(10)),
         child: Column(
           children: [
             Image.asset(
